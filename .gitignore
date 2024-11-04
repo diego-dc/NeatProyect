@@ -1,0 +1,52 @@
+# Node modules
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Compiled output
+dist/
+tmp/
+out-tsc/
+.angular
+
+# Firebase
+.firebase/
+.firebaserc
+firebase-debug.log
+firebase-debug.*.log
+firebase.json
+.env
+.firebasehosting.*
+
+# Compiled TypeScript
+*.tsbuildinfo
+
+# IDEs
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Logs
+logs/
+*.log
+
+# Dependency directories
+jspm_packages/
+bower_components/
+
+# Angular specific
+.angular/cache
+.angular/**
+.angular/*
+
+# Environment files (add if using local environment files)
+src/environments/*.ts
+
+# Mac system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
