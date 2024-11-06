@@ -27,17 +27,30 @@ export class RegisterComponent {
 
   errorMessage: string | null = null;
 
-  OnSubmit(): void {
+  async OnSubmit(): Promise<void> {
     const rawForm = this.form.getRawValue();
-    this.authService
-      .register(rawForm.email, rawForm.username, rawForm.password)
-      .subscribe({
-        next: () => {
-          this.router.navigateByUrl('/dashboard');
-        },
-        error: (err) => {
-          this.errorMessage = err.code;
-        },
-      });
+
+    try {
+      // Realizamos el registro y esperamos a que se complete
+      await this.authService
+        .register(rawForm.email, rawForm.username, rawForm.password)
+        .toPromise();
+
+      // Después de que el registro se haya completado, aseguramos que el usuario esté actualizado
+      this.authService.updateCurrentUser();
+
+      // Esperamos a que se actualice el estado
+      await new Promise((resolve) => setTimeout(resolve, 300)); // Puede ser un poco más o menos, dependiendo de tu flujo
+
+      // Ahora redirigimos al dashboard
+      this.router.navigateByUrl('/dashboard');
+    } catch (err) {
+      if (err instanceof Error) {
+        this.errorMessage = err.message;
+      } else {
+        this.errorMessage = 'An unknown error occurred';
+      }
+      console.error('Error during registration:', err);
+    }
   }
 }

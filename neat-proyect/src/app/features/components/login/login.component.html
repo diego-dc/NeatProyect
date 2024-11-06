@@ -14,8 +14,8 @@
         <input
           type="text"
           class="p-2 m-2 border-2 border-slate-800"
-          placeholder="Username"
-          formControlName="username"
+          placeholder="Email"
+          formControlName="email"
         />
         <input
           type="password"
@@ -26,6 +26,11 @@
         <button class="p-2 m-2 text-white bg-slate-800" type="submit">
           Login
         </button>
+        @if (errorMessage) {
+        <div class="text-center">
+          <p class="text-red-500">{{ errorMessage }}</p>
+        </div>
+        }
       </form>
     </div>
     <div class="flex justify-center w-full space-x-16">
