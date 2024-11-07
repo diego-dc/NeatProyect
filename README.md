@@ -49,40 +49,37 @@ La aplicación estará disponible en `http://localhost:4200`.
 
 ## Estructura del Proyecto
 
-neatProyect/
-├── src/
-│ ├── app/
-│ │ ├── core/ # Directorio core del proyecto Angular (Aquí van los servicios y componentes generales)
-│ │ │ ├── services/ # Servicios globales de la aplicación
-│ │ │ └── guards/ # Guardias para control de rutas
-│ │ │
-│ │ ├── shared/ # Directorio shared para componentes y servicios reutilizables
-│ │ │ ├── components/ # Componentes reutilizables en toda la aplicación
-│ │ │ ├── interfaces/ # Interfaces utilizadas globalmente
-│ │ │ └── services/ # Servicios comunes para toda la app (e.g., manejo de utilidades, formateo de datos)
-│ │ │
-│ │ ├── features/ # Directorio para características o módulos de la aplicación
-│ │ │ ├── feature1/ # Un módulo de la aplicación (por ejemplo, transacciones)
-│ │ │ │ ├── components/ # Componentes específicos para esta característica
-│ │ │ │ ├── services/ # Servicios específicos para esta característica
-│ │ │ │ └── pages/ # Páginas o vistas de esta característica
-│ │ │ └── feature2/ # Otro módulo de la aplicación (por ejemplo, balance de usuario)
-│ │ │ ├── components/ # Componentes específicos para esta característica
-│ │ │ ├── services/ # Servicios específicos para esta característica
-│ │ │ └── pages/ # Páginas o vistas de esta característica
-│ │ │
-│ │ ├── app-routing.module.ts # Archivo para definir las rutas de la aplicación
-│ │ ├── app.component.ts # Componente principal de la aplicación
-│ │ ├── app.module.ts # Módulo raíz de la aplicación
-│ │ └── main.ts # Archivo principal para arrancar la aplicación Angular
-│ │
-│ ├── styles.css # Estilos globales de la aplicación
-│ └── tsconfig.app.json # Configuración de TypeScript para la app
-│
-├── angular.json # Configuración global de Angular
-├── package.json # Dependencias y scripts del proyecto
-├── README.md # Archivo README del proyecto (este archivo)
-└── tsconfig.json # Configuración de TypeScript global
+    neatProyect/
+
+    ├── src/
+    │ ├── app/
+    │ │ ├── core/ # Directorio core del proyecto Angular (Aquí van los servicios y componentes generales)
+    │ │ │ ├── services/ # Servicios globales de la aplicación
+    │ │ │ └── guards/ # Guardias para control de rutas
+    │ │ │
+    │ │ ├── shared/ # Directorio shared para componentes y servicios reutilizables
+    │ │ │ ├── components/ # Componentes reutilizables en toda la aplicación
+    │ │ │ ├── interfaces/ # Interfaces utilizadas globalmente
+    │ │ │ └── services/ # Servicios comunes para toda la app (e.g., manejo de utilidades, formateo de datos)
+    │ │ │
+    │ │ ├── features/ # Directorio para características o módulos de la aplicación
+    │ │ │ ├── feature1/ # Un módulo de la aplicación (por ejemplo, transacciones)
+    │ │ │ │ ├── components/ # Componentes específicos para esta característica
+    │ │ │ │ ├── services/ # Servicios específicos para esta característica
+    │ │ │ │ └── pages/ # Páginas o vistas de esta característica
+    │ │ │
+    │ │ ├── app-routing.module.ts # Archivo para definir las rutas de la aplicación
+    │ │ ├── app.component.ts # Componente principal de la aplicación
+    │ │ ├── app.module.ts # Módulo raíz de la aplicación
+    │ │ └── main.ts # Archivo principal para arrancar la aplicación Angular
+    │ │
+    │ ├── styles.css # Estilos globales de la aplicación
+    │ └── tsconfig.app.json # Configuración de TypeScript para la app
+    │
+    ├── angular.json # Configuración global de Angular
+    ├── package.json # Dependencias y scripts del proyecto
+    ├── README.md # Archivo README del proyecto (este archivo)
+    └── tsconfig.json # Configuración de TypeScript global
 
 ## Modelo de Datos
 
