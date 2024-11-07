@@ -50,35 +50,36 @@ La aplicación estará disponible en `http://localhost:4200`.
 ## Estructura del Proyecto
 
 neatProyect/
-├── src/
+|- src/
+
 ├ src/app/
-├── src/app/core/ # Directorio core del proyecto Angular (Aquí van los servicios y componentes generales)
-├── src/app/core/services/ # Servicios globales de la aplicación
-└── src/app/core/guards/ # Guardias para control de rutas
+|- src/app/core/ # Directorio core del proyecto Angular (Aquí van los servicios y componentes generales)
+|- src/app/core/services/ # Servicios globales de la aplicación
+|- src/app/core/guards/ # Guardias para control de rutas
 |
-├── src/app/shared/ # Directorio shared para componentes y servicios reutilizables
-├── src/app/shared/components/ # Componentes reutilizables en toda la aplicación
-├── src/app/shared/interfaces/ # Interfaces utilizadas globalmente
-└── src/app/shared/services/ # Servicios comunes para toda la app (e.g., manejo de utilidades, formateo de datos)
+|- src/app/shared/ # Directorio shared para componentes y servicios reutilizables
+|- src/app/shared/components/ # Componentes reutilizables en toda la aplicación
+|- src/app/shared/interfaces/ # Interfaces utilizadas globalmente
+|- src/app/shared/services/ # Servicios comunes para toda la app (e.g., manejo de utilidades, formateo de datos)
 |
-├── src/app/features/ # Directorio para características o módulos de la aplicación
-├── src/app/features/feature1/ # Un módulo de la aplicación (por ejemplo, transacciones)
-├── src/app/features/feature1/components/ # Componentes específicos para esta característica
-├── src/app/features/feature1/services/ # Servicios específicos para esta característica
+|- src/app/features/ # Directorio para características o módulos de la aplicación
+|- src/app/features/feature1/ # Un módulo de la aplicación (por ejemplo, transacciones)
+|- src/app/features/feature1/components/ # Componentes específicos para esta característica
+|- src/app/features/feature1/services/ # Servicios específicos para esta característica
 |
 │
-├── src/app/app-routing.module.ts # Archivo para definir las rutas de la aplicación
-├── src/app/app.component.ts # Componente principal de la aplicación
-├── src/app/app.module.ts # Módulo raíz de la aplicación
-└── src/app/main.ts # Archivo principal para arrancar la aplicación Angular
+|- src/app/app-routing.module.ts # Archivo para definir las rutas de la aplicación
+|- src/app/app.component.ts # Componente principal de la aplicación
+|- src/app/app.module.ts # Módulo raíz de la aplicación
+|- src/app/main.ts # Archivo principal para arrancar la aplicación Angular
 │
-├── styles.css # Estilos globales de la aplicación
-└── tsconfig.app.json # Configuración de TypeScript para la app
+|- styles.css # Estilos globales de la aplicación
+|- tsconfig.app.json # Configuración de TypeScript para la app
 │
-├── angular.json # Configuración global de Angular
-├── package.json # Dependencias y scripts del proyecto
-├── README.md # Archivo README del proyecto (este archivo)
-└── tsconfig.json # Configuración de TypeScript global
+|- angular.json # Configuración global de Angular
+|- package.json # Dependencias y scripts del proyecto
+|- README.md # Archivo README del proyecto (este archivo)
+|- tsconfig.json # Configuración de TypeScript global
 
 ## Modelo de Datos
 
