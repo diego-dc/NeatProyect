@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Router, RouterLink } from '@angular/router';
-import { inject, Injectable } from '@angular/core';
+import { inject } from '@angular/core';
 import { AuthService } from '../../../core/services/auth/auth.service';
 
 @Component({

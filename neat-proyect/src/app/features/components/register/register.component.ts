@@ -4,7 +4,6 @@ import { HttpClient } from '@angular/common/http';
 import { Router, RouterLink } from '@angular/router';
 import { inject, Injectable } from '@angular/core';
 import { AuthService } from '../../../core/services/auth/auth.service';
-import { error } from 'console';
 
 @Component({
   selector: 'app-register',

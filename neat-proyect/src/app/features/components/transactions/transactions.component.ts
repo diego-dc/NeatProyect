@@ -1,8 +1,5 @@
 import { DashboardFirebaseService } from './../../services/dashboardFirebase/dashboard-firebase.service';
-import {
-  CardData,
-  StatusCardData,
-} from '../../../shared/interfaces/cards.interface';
+import { CardData } from '../../../shared/interfaces/cards.interface';
 import { BalanceDisplayComponent } from './../../../shared/components/balance-display/balance-display.component';
 import { CryptoDisplayComponent } from './../../../shared/components/crypto-display/crypto-display.component';
 import { Component, inject, OnInit } from '@angular/core';
@@ -186,7 +183,6 @@ export class TransactionsComponent implements OnInit {
           );
         }
       });
-      // Aquí puedes agregar la lógica para manejar la compra o venta de la criptomoneda
     } else {
       console.log('Formulario no válido');
     }
