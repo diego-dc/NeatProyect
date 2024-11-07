@@ -55,10 +55,10 @@ export class AuthService {
 
         // Crear el balance del usuario
         this.firebaseUserBalanceService.addUserBalance(response.user.uid, {
-          btc: 0.0, // Inicializa con 0 BTC
-          eth: 0.0, // Inicializa con 0 ETH
-          ltc: 0.0, // Inicializa con 0 LTC
-          usd: randomBalance, // Asigna el balance aleatorio en USD
+          Bitcoin: 0.0, // Inicializa con 0 BTC
+          Etherium: 0.0, // Inicializa con 0 ETH
+          Litecoin: 0.0, // Inicializa con 0 LTC
+          Dolares: randomBalance, // Asigna el balance aleatorio en USD
         });
       });
     });

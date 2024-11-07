@@ -1,3 +1,4 @@
+import { TransactionsComponent } from './features/components/transactions/transactions.component';
 import { Routes } from '@angular/router';
 import { LoginComponent } from './features/components/login/login.component';
 import { DashboardComponent } from './features/components/dashboard/dashboard.component';
@@ -37,6 +38,18 @@ export const routes: Routes = [
       {
         path: 'dashboard',
         component: DashboardComponent,
+        canActivate: [AuthGuard],
+      }, // Solo usuarios autenticados pueden acceder
+      // Agrega aquí otras rutas protegidas o de la app
+    ],
+  },
+  {
+    path: '',
+    component: MainLayoutComponent, // Usamos el layout principal para las rutas protegidas
+    children: [
+      {
+        path: 'transactions',
+        component: TransactionsComponent,
         canActivate: [AuthGuard],
       }, // Solo usuarios autenticados pueden acceder
       // Agrega aquí otras rutas protegidas o de la app
