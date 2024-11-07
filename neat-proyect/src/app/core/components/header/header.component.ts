@@ -20,17 +20,16 @@ export class HeaderComponent {
     console.log('Logging out...');
 
     try {
-      // Llamamos al logout y esperamos a que termine
+      // Llamar al logout y esperar a que termine
       await this.authService.logout().toPromise();
 
-      // Una vez que el logout haya terminado, actualizamos el estado del usuario
+      // Una vez que el logout haya terminado, actualizar el estado del usuario
       this.authService.updateCurrentUser();
 
-      // Esperamos un pequeño tiempo para que la actualización del estado se refleje correctamente
-      // Podrías utilizar `await` o usar un `rxjs` delay para hacer esto de manera más controlada
+      // Esperar un pequeño tiempo para que la actualización del estado se refleje correctamente
       await new Promise((resolve) => setTimeout(resolve, 300)); // 300ms de espera
 
-      // Redirigimos a la página de login
+      // Redirigir a la página de login
       this.router.navigateByUrl('/login');
     } catch (err) {
       console.error('Error during logout:', err);

@@ -30,6 +30,9 @@ export class BalanceDisplayComponent implements OnInit {
         this.firebaseUserBalanceService
           .getUserBalanceData(user.uid)
           .subscribe((data) => {
+            // Reiniciar la lista de statusCards y total_balance antes de procesar los nuevos datos
+            this.statusCards = [];
+            this.total_balance = 0;
             // Acceder al valor del balance en USD directamente si balances es un objeto
             this.usd_balance = data.balances['Dolares'] ?? 0; // Accede al balance en USD, o asigna 0 si no está definido
             this.total_balance += this.usd_balance;

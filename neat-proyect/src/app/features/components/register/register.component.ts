@@ -40,7 +40,7 @@ export class RegisterComponent {
       this.authService.updateCurrentUser();
 
       // Esperamos a que se actualice el estado
-      await new Promise((resolve) => setTimeout(resolve, 300)); // Puede ser un poco más o menos, dependiendo de tu flujo
+      await new Promise((resolve) => setTimeout(resolve, 300));
 
       // Ahora redirigimos al dashboard
       this.router.navigateByUrl('/dashboard');

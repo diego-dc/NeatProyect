@@ -13,7 +13,5 @@ import { AuthService } from '../../services/auth/auth.service';
 export class MainLayoutComponent implements OnInit {
   authService = inject(AuthService);
 
-  ngOnInit(): void {
-    console.log('Main layout initialized');
-  }
+  ngOnInit(): void {}
 }

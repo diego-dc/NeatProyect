@@ -8,8 +8,8 @@
         <div class="flex flex-col">
           <h1 class="text-2xl font-bold">Vender</h1>
           <form
-            [formGroup]="formComprar"
-            (ngSubmit)="onSubmit()"
+            [formGroup]="formVender"
+            (ngSubmit)="onSubmitSell()"
             class="p-8 rounded-md bg-background-color"
           >
             <!-- Campo para seleccionar la criptomoneda -->
@@ -82,7 +82,7 @@
           <h1 class="text-2xl font-bold">Comprar</h1>
           <form
             [formGroup]="formComprar"
-            (ngSubmit)="onSubmit()"
+            (ngSubmit)="onSubmitBuy()"
             class="p-8 rounded-md bg-background-color"
           >
             <!-- Campo para seleccionar la criptomoneda -->
@@ -156,8 +156,16 @@
     <app-balance-display></app-balance-display>
   </div>
   <div class="p-8 max-w-7xl">
-    <p class="mb-8 font-bold">Balance</p>
-    <div class="flex flex-col space-y-8">historial de transacciones</div>
+    <p class="mb-8 font-bold">Historial transacciones</p>
+    <div class="flex flex-col space-y-8">
+      <app-status-card
+        *ngFor="let transaction of transactionsHistory"
+        [balance]="transaction.usdAmount"
+        [status]="transaction.status"
+        [coinBalance]="transaction.amount"
+        [coinName]="transaction.cryptoName"
+      ></app-status-card>
+    </div>
     <hr />
   </div>
 </section>

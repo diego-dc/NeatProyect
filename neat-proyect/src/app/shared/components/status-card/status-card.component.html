@@ -9,20 +9,20 @@
     <p class="font-bold text-center">{{ coinBalance }}</p>
     <p
       *ngIf="status === 'saldo'"
-      class="font-semibold text-primary-color text-end"
+      class="font-semibold truncate text-primary-color text-end"
     >
       {{ balance }} <span class="text-slate-500">USD</span>
     </p>
     <p
       *ngIf="status === 'perdida'"
-      class="font-semibold text-feedback-red text-end"
+      class="font-semibold truncate text-feedback-red text-end"
     >
       <i class="bi bi-dash"></i>
       {{ balance }} <span class="text-slate-500">USD</span>
     </p>
     <p
       *ngIf="status === 'ganancia'"
-      class="font-semibold text-feedback-green text-end"
+      class="font-semibold truncate text-feedback-green text-end"
     >
       <i class="bi bi-plus"></i>
       {{ balance }} <span class="text-slate-500">USD</span>

@@ -35,8 +35,8 @@ export class LoginComponent {
       // Después de hacer login, aseguramos que el estado del usuario se actualice
       this.authService.updateCurrentUser();
 
-      // Esperamos que se actualice el estado (puedes ajustar el tiempo según lo necesites)
-      await new Promise((resolve) => setTimeout(resolve, 300)); // Retraso opcional si es necesario
+      // Esperamos que se actualice el estado del usuario
+      await new Promise((resolve) => setTimeout(resolve, 300));
 
       // Redirigimos al dashboard
       this.router.navigateByUrl('/dashboard');
