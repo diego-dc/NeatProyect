@@ -1,0 +1,16 @@
+<section class="inset-0 w-screen">
+  <div class="p-8 max-w-7xl">
+    <p class="font-bold">Valores actuales criptomonedas</p>
+    <div
+      class="grid grid-cols-1 gap-4 p-4 sm:grid-cols-2 lg:grid-cols-4 md:grid-col-3"
+    >
+      <app-card
+        *ngFor="let card of cards"
+        [acronym]="card.acronym"
+        [name]="card.name"
+        [value]="card.value"
+      ></app-card>
+    </div>
+    <hr />
+  </div>
+</section>

@@ -1,0 +1,91 @@
+<header class="flex justify-center w-screen text-white bg-primary-color">
+  <div class="flex items-center justify-between w-full px-8 py-2 max-w-7xl">
+    <!-- Logo y título -->
+    <div>
+      <p class="font-bold">
+        <i class="bi bi-currency-exchange"></i> Neat-TestApp
+      </p>
+    </div>
+
+    <!-- Navegación en el centro (oculto en móviles) -->
+    <nav class="hidden space-x-8 md:flex">
+      <a
+        routerLink="/dashboard"
+        class="font-semibold text-white hover:text-text-color"
+        >Dashboard</a
+      >
+      <a
+        routerLink="/transactions"
+        class="font-semibold text-white hover:text-text-color"
+        >Transacciones</a
+      >
+    </nav>
+
+    <!-- Menú de usuario y botón de logout -->
+    <div class="flex items-center space-x-8">
+      <!-- Botón para abrir el menú en dispositivos móviles -->
+      <button
+        class="p-2 text-white md:hidden focus:outline-none focus:ring-2 focus:ring-primary-color"
+        (click)="isMenuOpen = !isMenuOpen"
+      >
+        <i class="text-2xl bi bi-list"></i>
+      </button>
+
+      <!-- Información del usuario y botón de logout (visible en pantallas medianas en adelante) -->
+      <p
+        class="items-center hidden font-bold md:flex"
+        *ngIf="
+          authService.currentUserSig() && authService.currentUserSig()?.username
+        "
+      >
+        <i class="bi bi-person-fill me-1"></i>
+        {{ authService.currentUserSig()?.username }}
+      </p>
+      <button
+        class="hidden md:block px-6 py-3 font-bold text-primary-color bg-white rounded-[24px] hover:bg-[#EBF0FE] focus:outline-none focus:ring-2 focus:ring-primary-color"
+        type="button"
+        (click)="logout()"
+      >
+        <i class="bi bi-box-arrow-in-left me-1"></i> Cerrar Sesión
+      </button>
+    </div>
+  </div>
+
+  <!-- Menú desplegable para dispositivos móviles -->
+  <div *ngIf="isMenuOpen" class="absolute w-full md:hidden bg-primary-color">
+    <nav class="flex flex-col items-center py-4 space-y-4">
+      <button
+        class="p-2 text-white md:hidden focus:outline-none focus:ring-2 focus:ring-primary-color"
+        (click)="isMenuOpen = !isMenuOpen"
+      >
+        <i class="text-2xl bi bi-list"></i>
+      </button>
+      <a
+        routerLink="/dashboard"
+        class="font-semibold text-white hover:text-text-color"
+        >Dashboard</a
+      >
+      <a
+        routerLink="/transactions"
+        class="font-semibold text-white hover:text-text-color"
+        >Transacciones</a
+      >
+      <p
+        class="flex items-center font-bold"
+        *ngIf="
+          authService.currentUserSig() && authService.currentUserSig()?.username
+        "
+      >
+        <i class="bi bi-person-fill me-1"></i>
+        {{ authService.currentUserSig()?.username }}
+      </p>
+      <button
+        class="px-3 py-2 font-bold text-primary-color bg-white rounded-[24px] hover:bg-[#EBF0FE] focus:outline-none focus:ring-2 focus:ring-primary-color"
+        type="button"
+        (click)="logout()"
+      >
+        <i class="bi bi-box-arrow-in-left me-1"></i> Cerrar Sesión
+      </button>
+    </nav>
+  </div>
+</header>

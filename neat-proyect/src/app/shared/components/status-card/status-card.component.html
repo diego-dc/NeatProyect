@@ -1,0 +1,31 @@
+<div
+  class="flex p-4 bg-white shadow-lg card rounded-xl hover:ring-2 hover:ring-slate-400"
+>
+  <div class="grid w-full grid-cols-3 gap-0">
+    <p class="font-bold">
+      <i class="bi bi-coin me-1"></i>
+      <span>{{ coinName }}</span>
+    </p>
+    <p class="font-bold text-center">{{ coinBalance }}</p>
+    <p
+      *ngIf="status === 'saldo'"
+      class="font-semibold truncate text-primary-color text-end"
+    >
+      {{ balance }} <span class="text-slate-500">USD</span>
+    </p>
+    <p
+      *ngIf="status === 'perdida'"
+      class="font-semibold truncate text-feedback-red text-end"
+    >
+      <i class="bi bi-dash"></i>
+      {{ balance }} <span class="text-slate-500">USD</span>
+    </p>
+    <p
+      *ngIf="status === 'ganancia'"
+      class="font-semibold truncate text-feedback-green text-end"
+    >
+      <i class="bi bi-plus"></i>
+      {{ balance }} <span class="text-slate-500">USD</span>
+    </p>
+  </div>
+</div>
