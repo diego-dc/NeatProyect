@@ -1,19 +1,12 @@
-import { DashboardFirebaseService } from './../../services/dashboardFirebase/dashboard-firebase.service';
-import { Component, inject, OnInit } from '@angular/core';
+import { BalanceDisplayComponent } from '../../../shared/components/balance-display/balance-display.component';
+import { CryptoDisplayComponent } from './../../../shared/components/crypto-display/crypto-display.component';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [],
+  imports: [CryptoDisplayComponent, BalanceDisplayComponent],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss',
 })
-export class DashboardComponent implements OnInit {
-  DashboardFirebaseService = inject(DashboardFirebaseService);
-
-  ngOnInit(): void {
-    this.DashboardFirebaseService.getDashboardData().subscribe((data) => {
-      console.log(data);
-    });
-  }
-}
+export class DashboardComponent {}

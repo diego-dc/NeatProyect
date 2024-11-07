@@ -2,3 +2,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+// Variables de color
+$text-color: #151F6D;            // Color de texto principal
+$primary-color: #3369F0;         // Color primario (por ejemplo, un azul)
+$primary-100: #F04E98;           // Tono más claro del color primario
+$background-color: #FCFDFF;     // Color de fondo principal
+
+$feedback-green: #50A684;         // Color primario (por ejemplo, un azul)
+$feedback-red: #F9423A;           // Tono más claro del color primario
+$feedback-yellow: #FF9E1B;  
+
+:root {
+    --text-color: #{$text-color}; // Esto convierte la variable SCSS en una variable CSS
+    --primary-color: #{$primary-color}; // Esto convierte la variable SCSS en una variable CSS
+    --primary-100: #{$primary-100}; // Esto convierte la variable SCSS en una variable CSS
+    --background-color: #{$background-color}; // Esto convierte la variable SCSS en una variable CSS
+
+    --feedback-green: #{$feedback-green}; // Esto convierte la variable SCSS en una variable CSS
+    --feedback-red: #{$feedback-red}; // Esto convierte la variable SCSS en una variable CSS
+    --feedback-yellow: #{$feedback-yellow}; // Esto convierte la variable SCSS en una variable CSS
+}
+
+// Ejemplo de uso de las variables
+body {
+  color: $text-color;
+  background-color: $background-color;
+  font-family: 'Poppins', sans-serif;
+}

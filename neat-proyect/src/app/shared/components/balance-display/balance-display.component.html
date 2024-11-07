@@ -1,0 +1,33 @@
+<section class="inset-0 w-screen">
+  <div class="p-8 m-8 text-white bg-primary-color max-w-7xl rounded-xl">
+    <div class="grid w-full grid-cols-2 gap-4">
+      <div class="flex flex-col">
+        <h1 class="text-2xl font-bold">Saldo actual dolares $</h1>
+        <div class="flex text-5xl">
+          <i class="bi bi-piggy-bank-fill me-1"></i>
+          <p>{{ usd_balance }}</p>
+        </div>
+      </div>
+      <div class="flex flex-col">
+        <h1 class="text-2xl font-bold">Saldo total $</h1>
+        <div class="flex text-5xl">
+          <i class="bi bi-piggy-bank-fill me-1"></i>
+          <p>{{ total_balance }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-8 max-w-7xl">
+    <p class="mb-8 font-bold">Balance</p>
+    <div class="flex flex-col space-y-8">
+      <app-status-card
+        *ngFor="let statusCard of statusCards"
+        [balance]="statusCard.balance"
+        [status]="statusCard.status"
+        [coinBalance]="statusCard.coinBalance"
+        [coinName]="statusCard.coinName"
+      ></app-status-card>
+    </div>
+    <hr />
+  </div>
+</section>

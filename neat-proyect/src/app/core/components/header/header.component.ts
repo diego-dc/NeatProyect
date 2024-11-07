@@ -14,6 +14,7 @@ export class HeaderComponent {
   authService = inject(AuthService);
   isAuthenticated = this.authService.currentUserSig;
   router = inject(Router);
+  isMenuOpen = false;
 
   async logout(): Promise<void> {
     console.log('Logging out...');
